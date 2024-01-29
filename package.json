@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "db:createMigration": "node_modules/.bin/sequelize migration:create --name $migration_name",
+    "db:migrate": "./node_modules/.bin/sequelize db:migrate",
+    "db:seed": "./node_modules/.bin/sequelize-cli db:seed:all",
+    "db:migrate:undo": "node_modules/.bin/sequelize db:migrate:undo",
+    "db:migrate:reset": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "db:genrate": "npm run db:migrate && npm run db:seed",
+    "dev": "node server.js"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bignumber.js": "^9.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-validator": "^6.15.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.1.2",
+    "nodemailer": "^6.9.1",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.6.0"
+  }
+}
